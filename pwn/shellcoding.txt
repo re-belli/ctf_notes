@@ -1,0 +1,11 @@
+# Any of the following characters in a memory address could cause a C API to choke when it trys to write to the address:
+\x00 (Null)
+\x09 (Tab)
+\x0a (New line)
+\x0d (Carriage return)
+\x20 (Space)
+
+# scanf function chokes on shellcode with \x0b (vertical tab)
+
+# assembler/disassembler
+https://defuse.ca/online-x86-assembler.htm#disassembly
