@@ -1,0 +1,38 @@
+disas - disassemble function
+break *address - set breakpoint at address
+continue - continue execution
+run - run program
+print - print address
+st - step
+x - examine
+x/s - examine string
+x/n - examine n entries
+info registers - show current values of CPU registers
+info proc map - show memory map
+define hook - build a hook to call under conditions
+stepi (si) - step instruction (follow jumps)
+nexti (ni) - next instruction
+j *address - jump directly to an instruction and skip all instructions in between 
+gdb -q -p <pid> - debug a running process 
+set disassembly-flavor intel - change the disassembly to intel 
+delete - delete all breakpoints
+info breakpoints - get all breakpoints set 
+dl 1 - delete breakpoint 
+x/20i address - examine 20 instructions at address
+info func - get all loaded functions 
+x/xg $rsp - verify control x64 buffer overflow 
+show follow-fork-mode
+set follow-fork-mode child
+show detach-on-fork
+set detach-on-fork off
+bt - backtrace
+
+# Dereference a pointer to a MyStruct and display 4 words of memory in hexadecimal format starting from the stack pointer ($rsp)
+x/4wx *(MyStruct *)$rsp
+
+
+# Dereference a pointer to a char and display a null-terminated string starting from the address in the stack pointer ($rsp)
+x/s *(char *)$rsp
+
+# Dereference a pointer to an integer and display 4 words of memory in hexadecimal format starting from the stack pointer ($rsp)
+x/4wx *(int *)$rsp
